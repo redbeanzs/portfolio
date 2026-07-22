@@ -1,0 +1,2318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Stina Drill | Market Analytics, Product & Data</title>
+  <meta name="description" content="Portfolio for Stina Drill, a University of Maryland Information Science graduate focused on market analytics, product strategy, research, and data analytics." />
+  <meta name="theme-color" content="#e75480" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+:root {
+  --bg: #fff7fb;
+  --bg-2: #fff0f7;
+  --card: rgba(255, 255, 255, 0.82);
+  --ink: #21151f;
+  --muted: #6d5c68;
+  --muted-2: #8f7d89;
+  --line: rgba(231, 84, 128, 0.18);
+  --pink: #e75480;
+  --pink-dark: #bf2f61;
+  --pink-soft: #ffd6e7;
+  --pink-light: #fff0f6;
+  --lavender: #b79ced;
+  --lavender-soft: #f2eaff;
+  --peach: #ffd2c4;
+  --dark: #1d111b;
+  --white: #ffffff;
+  --shadow: 0 24px 70px rgba(114, 46, 78, 0.12);
+  --shadow-hover: 0 30px 90px rgba(114, 46, 78, 0.2);
+  --max: 1180px;
+  --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-accent: "Space Grotesk", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(255, 182, 217, 0.65), transparent 32rem),
+    radial-gradient(circle at 80% 10%, rgba(183, 156, 237, 0.42), transparent 30rem),
+    linear-gradient(180deg, var(--bg), #ffffff 45%, var(--bg-2));
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(231, 84, 128, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(231, 84, 128, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 75%);
+  z-index: -2;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  color: var(--white);
+  background: var(--pink);
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: -999px;
+  background: var(--dark);
+  color: var(--white);
+  padding: 0.8rem 1rem;
+  border-radius: 0 0 12px 0;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+.site-shell {
+  width: min(var(--max), calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 6.5rem 0;
+  position: relative;
+}
+
+.section-tight {
+  padding: 4.6rem 0;
+}
+
+.section-heading {
+  margin-bottom: 2.6rem;
+  max-width: 780px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--pink-dark);
+  background: rgba(255, 255, 255, 0.68);
+  font-family: var(--font-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(231, 84, 128, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, var(--pink), var(--lavender));
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(231, 84, 128, 0.12);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 8vw, 7.4rem);
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+  margin: 1.3rem 0 1rem;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  margin: 1rem 0 1rem;
+}
+
+h3 {
+  font-size: 1.08rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, var(--pink), #9e54d6 70%, #5d3fd3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.lede {
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 64ch;
+}
+
+
+.intro {
+  min-height: calc(100vh - 92px);
+  display: grid;
+  align-content: center;
+  padding: 5.4rem 0 5rem;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: 1.3rem;
+  align-items: stretch;
+}
+
+.intro-copy {
+  position: relative;
+  overflow: hidden;
+  border-radius: 42px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.88), transparent 15rem),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(255, 240, 247, 0.82));
+  border: 1px solid rgba(231, 84, 128, 0.16);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.intro-copy::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  right: -100px;
+  bottom: -120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(231, 84, 128, 0.18), transparent 70%);
+  pointer-events: none;
+}
+
+.intro-label {
+  margin: 1.7rem 0 0.5rem;
+  font-family: var(--font-accent);
+  color: var(--pink-dark);
+  font-weight: 800;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.intro h1 {
+  max-width: 780px;
+  font-size: clamp(3rem, 7.8vw, 6.8rem);
+  line-height: 0.95;
+  margin: 0 0 1.2rem;
+}
+
+.intro-lede {
+  max-width: 68ch;
+}
+
+.intro-panel {
+  border-radius: 42px;
+  padding: clamp(1.25rem, 3vw, 1.7rem);
+  background:
+    radial-gradient(circle at 82% 12%, rgba(183, 156, 237, 0.26), transparent 12rem),
+    linear-gradient(135deg, #281525, #472039);
+  color: var(--white);
+  box-shadow: 0 30px 90px rgba(36, 21, 35, 0.22);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 440px;
+}
+
+.intro-panel-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: rgba(255, 255, 255, 0.76);
+  font-family: var(--font-accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.panel-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #26c281;
+  box-shadow: 0 0 0 7px rgba(38, 194, 129, 0.13);
+}
+
+.focus-list {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.focus-list div {
+  padding: 1rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.focus-list strong {
+  display: block;
+  font-family: var(--font-accent);
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.focus-list p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.92rem;
+}
+
+.intro-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  backdrop-filter: blur(18px);
+}
+
+.nav {
+  width: min(var(--max), calc(100% - 2rem));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid rgba(231, 84, 128, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 18px 60px rgba(96, 41, 71, 0.1);
+  padding: 0.6rem 0.7rem 0.6rem 1.05rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  font-family: var(--font-accent);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--pink), var(--lavender));
+  box-shadow: 0 12px 30px rgba(231, 84, 128, 0.26);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.65rem 0.86rem;
+  border-radius: 999px;
+  transition: 180ms ease;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="true"] {
+  color: var(--pink-dark);
+  background: var(--pink-light);
+}
+
+.nav-action {
+  text-decoration: none;
+  color: var(--white);
+  background: var(--dark);
+  font-weight: 800;
+  font-size: 0.86rem;
+  padding: 0.72rem 1rem;
+  border-radius: 999px;
+  transition: 180ms ease;
+}
+
+.nav-action:hover {
+  transform: translateY(-1px);
+  background: var(--pink-dark);
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--white);
+  background: var(--dark);
+  font-weight: 800;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+}
+
+.mobile-menu {
+  display: none;
+  width: min(var(--max), calc(100% - 2rem));
+  margin: 0.7rem auto 0;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+  padding: 0.7rem;
+}
+
+.mobile-menu.open {
+  display: grid;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 800;
+  border-radius: 16px;
+  padding: 0.8rem 0.9rem;
+}
+
+.mobile-menu a:hover {
+  background: var(--pink-light);
+  color: var(--pink-dark);
+}
+
+.hero {
+  min-height: calc(100vh - 90px);
+  display: grid;
+  align-items: center;
+  padding: 4.5rem 0 5rem;
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(310px, 0.95fr);
+  align-items: center;
+  gap: 3.4rem;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--line);
+  color: var(--pink-dark);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  padding: 0.48rem 0.76rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  box-shadow: 0 12px 34px rgba(231, 84, 128, 0.08);
+}
+
+.hero-title-small {
+  display: block;
+  font-family: var(--font-accent);
+  color: var(--pink-dark);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin: 2rem 0 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.92rem 1.22rem;
+  text-decoration: none;
+  font-weight: 900;
+  transition: 180ms ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--pink), var(--pink-dark));
+  box-shadow: 0 18px 46px rgba(231, 84, 128, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 60px rgba(231, 84, 128, 0.35);
+}
+
+.btn-secondary {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.78);
+  border-color: var(--line);
+  box-shadow: 0 18px 46px rgba(96, 41, 71, 0.08);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  background: var(--white);
+  box-shadow: 0 24px 60px rgba(96, 41, 71, 0.12);
+}
+
+.hero-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 60ch;
+}
+
+.hero-note strong {
+  color: var(--ink);
+}
+
+.hero-note-dot {
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+  margin-top: 0.45rem;
+  border-radius: 50%;
+  background: #26c281;
+  box-shadow: 0 0 0 7px rgba(38, 194, 129, 0.12);
+}
+
+.hero-card-wrap {
+  position: relative;
+  min-height: 560px;
+  display: grid;
+  place-items: center;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(2px);
+  opacity: 0.9;
+  animation: float 8s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 240px;
+  height: 240px;
+  top: 30px;
+  left: 10px;
+  background: radial-gradient(circle, rgba(255, 182, 217, 0.95), rgba(255, 182, 217, 0));
+}
+
+.orb-2 {
+  width: 220px;
+  height: 220px;
+  right: -10px;
+  bottom: 75px;
+  background: radial-gradient(circle, rgba(183, 156, 237, 0.75), rgba(183, 156, 237, 0));
+  animation-delay: -2s;
+}
+
+.orb-3 {
+  width: 120px;
+  height: 120px;
+  right: 40px;
+  top: 60px;
+  background: radial-gradient(circle, rgba(255, 210, 196, 0.9), rgba(255, 210, 196, 0));
+  animation-delay: -4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -22px, 0);
+  }
+}
+
+.profile-card {
+  width: min(410px, 100%);
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 42px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.58)),
+    linear-gradient(135deg, rgba(231, 84, 128, 0.16), rgba(183, 156, 237, 0.18));
+  box-shadow: var(--shadow-hover);
+  backdrop-filter: blur(24px);
+  padding: 1.1rem;
+  z-index: 2;
+}
+
+.profile-inner {
+  height: 100%;
+  min-height: 480px;
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 24% 16%, rgba(255, 255, 255, 0.9), transparent 11rem),
+    linear-gradient(135deg, #ffedf6, #f9eaff 55%, #ffffff);
+  border: 1px solid rgba(231, 84, 128, 0.12);
+  padding: 1.3rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.profile-photo-placeholder {
+  position: absolute;
+  inset: 1.3rem 1.3rem auto;
+  height: 260px;
+  border-radius: 28px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,255,255,0.95), transparent 9rem),
+    linear-gradient(135deg, var(--pink-soft), var(--lavender-soft));
+  border: 1px solid rgba(231, 84, 128, 0.14);
+  overflow: hidden;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-initials {
+  font-family: var(--font-display);
+  font-size: 7rem;
+  line-height: 1;
+  letter-spacing: -0.08em;
+  color: rgba(231, 84, 128, 0.84);
+  text-shadow: 0 18px 35px rgba(231, 84, 128, 0.14);
+}
+
+.profile-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(231, 84, 128, 0.14);
+  color: var(--pink-dark);
+  font-weight: 900;
+  font-size: 0.74rem;
+  padding: 0.5rem 0.72rem;
+  box-shadow: 0 16px 40px rgba(96, 41, 71, 0.1);
+}
+
+.mini-dashboard {
+  margin-top: auto;
+  position: relative;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(231, 84, 128, 0.14);
+  border-radius: 26px;
+  padding: 1rem;
+  box-shadow: 0 20px 50px rgba(96, 41, 71, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.mini-dashboard h3 {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-accent);
+}
+
+.mini-bars {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.mini-bar {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.mini-bar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.mini-bar-track {
+  height: 9px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(231, 84, 128, 0.12);
+}
+
+.mini-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--pink), var(--lavender));
+  transform-origin: left;
+  animation: growBar 1.25s ease both;
+}
+
+@keyframes growBar {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.stat {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 1.15rem;
+  box-shadow: 0 18px 50px rgba(96, 41, 71, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.stat strong {
+  display: block;
+  font-family: var(--font-display);
+  color: var(--pink-dark);
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.stat span {
+  display: block;
+  color: var(--muted);
+  margin-top: 0.42rem;
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
+.glass-card {
+  background: var(--card);
+  border: 1px solid rgba(231, 84, 128, 0.16);
+  border-radius: 34px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.about-grid,
+.featured,
+.research-grid,
+.education-wrap {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.about-grid {
+  grid-template-columns: minmax(0, 1fr) 390px;
+  align-items: stretch;
+}
+
+.about-copy {
+  padding: clamp(1.3rem, 3vw, 2.1rem);
+}
+
+.about-copy p {
+  color: var(--muted);
+  font-size: 1.02rem;
+  margin-bottom: 1rem;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.about-side {
+  padding: 1.1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.about-tile {
+  border-radius: 25px;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 240, 247, 0.8));
+  border: 1px solid rgba(231, 84, 128, 0.14);
+}
+
+.about-tile h3 {
+  margin-bottom: 0.35rem;
+  font-family: var(--font-accent);
+}
+
+.about-tile p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.featured {
+  grid-template-columns: 0.86fr 1.14fr;
+  align-items: stretch;
+  padding: 1rem;
+}
+
+.featured-visual {
+  min-height: 360px;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.85), transparent 10rem),
+    radial-gradient(circle at 80% 80%, rgba(183, 156, 237, 0.42), transparent 13rem),
+    linear-gradient(135deg, #ffdaea, #fff7fb);
+  border: 1px solid rgba(231, 84, 128, 0.12);
+  padding: 1.15rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-frame {
+  position: absolute;
+  inset: 1.15rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(231, 84, 128, 0.14);
+  box-shadow: 0 24px 58px rgba(96, 41, 71, 0.16);
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 0.8rem;
+}
+
+.dash-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dash-dots {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.dash-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--pink-soft);
+}
+
+.dash-title {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  font-family: var(--font-accent);
+}
+
+.dash-map {
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 40% 50%, rgba(231, 84, 128, 0.35) 0 4px, transparent 5px),
+    radial-gradient(circle at 62% 38%, rgba(183, 156, 237, 0.42) 0 4px, transparent 5px),
+    radial-gradient(circle at 70% 60%, rgba(231, 84, 128, 0.28) 0 3px, transparent 4px),
+    linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,240,247,0.92));
+  border: 1px solid rgba(231, 84, 128, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.dash-map::before,
+.dash-map::after {
+  content: "";
+  position: absolute;
+  inset: 24%;
+  border: 1px solid rgba(231, 84, 128, 0.2);
+  border-radius: 56% 44% 65% 35%;
+  transform: rotate(-12deg);
+}
+
+.dash-map::after {
+  inset: 38% 16% 22% 45%;
+  transform: rotate(21deg);
+  border-color: rgba(183, 156, 237, 0.28);
+}
+
+.dash-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.55rem;
+}
+
+.dash-chip {
+  border-radius: 14px;
+  background: var(--pink-light);
+  color: var(--pink-dark);
+  padding: 0.6rem;
+  font-weight: 900;
+  font-size: 0.73rem;
+  text-align: center;
+}
+
+.featured-copy {
+  padding: clamp(1.3rem, 3vw, 2.2rem);
+}
+
+.featured-copy h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.05;
+  margin: 0.8rem 0;
+  letter-spacing: -0.04em;
+}
+
+.featured-copy p {
+  color: var(--muted);
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.1rem 0 1.5rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(231, 84, 128, 0.18);
+  background: var(--pink-light);
+  color: var(--pink-dark);
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.42rem 0.68rem;
+  border-radius: 999px;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: 1.3rem 0 1.6rem;
+  padding: 0;
+  list-style: none;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  color: var(--muted);
+  font-size: 0.93rem;
+  font-weight: 650;
+}
+
+.feature-list li::before {
+  content: "✦";
+  color: var(--pink);
+  font-size: 0.85rem;
+  margin-top: 0.08rem;
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  padding-left: 1.2rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  bottom: 0.75rem;
+  width: 2px;
+  background: linear-gradient(var(--pink), var(--lavender));
+  border-radius: 999px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -1.58rem;
+  top: 1.15rem;
+  width: 13px;
+  height: 13px;
+  background: var(--white);
+  border: 3px solid var(--pink);
+  border-radius: 50%;
+  box-shadow: 0 0 0 7px rgba(231, 84, 128, 0.1);
+}
+
+.timeline-card {
+  padding: clamp(1.15rem, 3vw, 1.55rem);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(231, 84, 128, 0.14);
+  box-shadow: 0 18px 50px rgba(96, 41, 71, 0.08);
+  transition: 180ms ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.timeline-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 0.8rem;
+}
+
+.timeline-head h3 {
+  margin: 0;
+  font-family: var(--font-accent);
+  font-size: 1.1rem;
+}
+
+.timeline-place {
+  color: var(--pink-dark);
+  font-weight: 900;
+  font-size: 0.92rem;
+  margin-top: 0.18rem;
+}
+
+.timeline-date {
+  color: var(--muted-2);
+  border: 1px solid var(--line);
+  background: var(--pink-light);
+  padding: 0.42rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.timeline-card p {
+  margin-bottom: 0.8rem;
+  color: var(--muted);
+}
+
+.clean-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.clean-list li {
+  color: var(--muted);
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  font-size: 0.94rem;
+}
+
+.clean-list li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-top: 0.62rem;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink), var(--lavender));
+}
+
+.research-grid {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+.research-card,
+.edu-card,
+.looking-card {
+  padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+.research-card h3,
+.edu-card h3,
+.looking-card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.035em;
+}
+
+.research-card p,
+.edu-card p,
+.looking-card p {
+  color: var(--muted);
+}
+
+.interest-cloud,
+.course-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+
+.interest-cloud span,
+.course-grid span {
+  padding: 0.62rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 0.86rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(231, 84, 128, 0.14);
+  box-shadow: 0 18px 50px rgba(96, 41, 71, 0.08);
+  transition: 190ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(231, 84, 128, 0.32);
+}
+
+.project-thumb {
+  min-height: 150px;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 26% 18%, rgba(255, 255, 255, 0.9), transparent 7rem),
+    linear-gradient(135deg, var(--pink-soft), var(--lavender-soft));
+  border: 1px solid rgba(231, 84, 128, 0.12);
+  margin-bottom: 1rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-thumb::before {
+  content: "";
+  width: 160px;
+  height: 160px;
+  border-radius: 46% 54% 62% 38%;
+  border: 1px solid rgba(231, 84, 128, 0.22);
+  position: absolute;
+  transform: rotate(-18deg);
+}
+
+.project-icon {
+  position: relative;
+  z-index: 2;
+  width: 58px;
+  height: 58px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  color: var(--white);
+  font-family: var(--font-accent);
+  font-weight: 900;
+  font-size: 1.25rem;
+  background: linear-gradient(135deg, var(--pink), var(--lavender));
+  box-shadow: 0 18px 44px rgba(231, 84, 128, 0.28);
+}
+
+.project-card h3 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-accent);
+  font-size: 1.12rem;
+}
+
+.project-card p {
+  color: var(--muted);
+  font-size: 0.93rem;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.small-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.52rem 0.7rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: var(--pink-dark);
+  background: var(--pink-light);
+  border: 1px solid var(--line);
+  transition: 180ms ease;
+}
+
+.small-link:hover {
+  background: var(--pink);
+  color: var(--white);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  padding: 1.2rem;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(231, 84, 128, 0.14);
+  box-shadow: 0 18px 50px rgba(96, 41, 71, 0.08);
+}
+
+.skill-card h3 {
+  font-family: var(--font-accent);
+  margin-bottom: 0.9rem;
+}
+
+.skill-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.skill-card li {
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 650;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  border-bottom: 1px solid rgba(231, 84, 128, 0.09);
+  padding-bottom: 0.45rem;
+}
+
+.skill-card li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.skill-card li::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--pink-soft);
+  flex: 0 0 auto;
+}
+
+.education-wrap {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+.contact-panel {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background:
+    radial-gradient(circle at top left, rgba(255, 182, 217, 0.4), transparent 24rem),
+    linear-gradient(135deg, #241523, #3a1c33 68%, #4b2140);
+  color: var(--white);
+  border-radius: 40px;
+  box-shadow: 0 30px 90px rgba(36, 21, 35, 0.22);
+}
+
+.contact-panel .eyebrow {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: var(--pink-soft);
+  box-shadow: none;
+}
+
+.contact-panel h2 {
+  max-width: 750px;
+}
+
+.contact-panel p {
+  color: rgba(255, 255, 255, 0.74);
+  max-width: 68ch;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.contact-card {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  transition: 180ms ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.contact-card span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.contact-card strong {
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+footer {
+  padding: 2.2rem 0 3rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+footer strong {
+  color: var(--pink-dark);
+}
+
+.built-with {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
+}
+
+.built-with span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.35rem 0.58rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 1040px) {
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-panel {
+    min-height: auto;
+  }
+
+  .intro-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero-grid,
+  .about-grid,
+  .featured,
+  .research-grid,
+  .education-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card-wrap {
+    min-height: 500px;
+    order: -1;
+  }
+
+  .stat-strip,
+  .skills-grid,
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .nav-links,
+  .nav-action {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .section {
+    padding: 4.6rem 0;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 18vw, 5.6rem);
+  }
+
+  .hero {
+    padding-top: 2.4rem;
+    min-height: auto;
+  }
+
+  .hero-grid {
+    gap: 1.2rem;
+  }
+
+  .timeline-head {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-date {
+    justify-self: start;
+  }
+
+  .projects-grid,
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+
+  .intro {
+    padding-top: 2.4rem;
+    min-height: auto;
+  }
+
+  .intro-copy,
+  .intro-panel {
+    border-radius: 30px;
+  }
+
+  .intro-stats {
+    grid-template-columns: 1fr;
+  }
+  .site-shell,
+  .nav,
+  .mobile-menu {
+    width: min(100% - 1.1rem, var(--max));
+  }
+
+  .nav {
+    padding-left: 0.8rem;
+  }
+
+  .brand span:not(.brand-mark) {
+    display: none;
+  }
+
+  .hero-card-wrap {
+    min-height: 430px;
+  }
+
+  .profile-card {
+    border-radius: 32px;
+    min-height: 430px;
+  }
+
+  .profile-inner {
+    min-height: 400px;
+  }
+
+  .profile-photo-placeholder {
+    height: 210px;
+  }
+
+  .profile-initials {
+    font-size: 5rem;
+  }
+
+  .stat-strip,
+  .skills-grid,
+  .contact-grid,
+  .dash-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-visual {
+    min-height: 320px;
+  }
+
+  .contact-panel {
+    border-radius: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+.mood-visual {
+  background:
+    radial-gradient(circle at 28% 42%, rgba(231, 84, 128, 0.34) 0 7px, transparent 8px),
+    radial-gradient(circle at 48% 32%, rgba(183, 156, 237, 0.42) 0 6px, transparent 7px),
+    radial-gradient(circle at 66% 55%, rgba(231, 84, 128, 0.26) 0 8px, transparent 9px),
+    radial-gradient(circle at 78% 34%, rgba(255, 210, 196, 0.9) 0 6px, transparent 7px),
+    linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,240,247,0.92));
+}
+
+.mood-visual::before {
+  inset: 18% 12% 22% 12%;
+  border-radius: 28px;
+  transform: none;
+}
+
+.mood-visual::after {
+  inset: auto 12% 26% 12%;
+  height: 2px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--pink), var(--lavender));
+  transform: none;
+}
+
+</style>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Stina Drill home">
+        <span class="brand-mark">S</span>
+        <span>Stina Drill</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about" data-nav>About</a>
+        <a href="#experience" data-nav>Experience</a>
+        <a href="#research" data-nav>Research + Users</a>
+        <a href="#projects" data-nav>Projects</a>
+        <a href="#skills" data-nav>Skills</a>
+        <a href="#contact" data-nav>Contact</a>
+      </div>
+
+      <a class="nav-action" href="#contact">Connect</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research + Users</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="intro site-shell" id="home">
+      <div class="intro-grid">
+        <div class="intro-copy">
+          <div class="hero-kicker">
+            <span class="pill">Market Analytics · Product · Data</span>
+            <span class="pill">Market + Data</span>
+            <span class="pill">Research + Users</span>
+          </div>
+
+          <p class="intro-label">Hi, I’m Stina.</p>
+          <h1>I turn human behavior, market questions, and data into clearer decisions.</h1>
+
+          <p class="lede intro-lede">
+            I recently graduated from the University of Maryland with a B.S. in Information Science and a minor in Astronomy. I’m interested in market analytics, product management, and data analytics, especially work that connects what people do, what the data shows, and what a team should do next.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-secondary" href="assets/Stina_Drill_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+          </div>
+        </div>
+
+        <aside class="intro-panel" aria-label="Career Focus">
+          <div class="intro-panel-top">
+            <span class="panel-dot"></span>
+            <span>Career Focus</span>
+          </div>
+
+          <div class="focus-list">
+            <div>
+              <strong>Research + Users data</strong>
+              <p>Understanding users, trends, behavior, and what the numbers mean for decisions.</p>
+            </div>
+            <div>
+              <strong>Data storytelling</strong>
+              <p>Turning analysis into dashboards, summaries, and recommendations people can act on.</p>
+            </div>
+            <div>
+              <strong>Human-centered strategy</strong>
+              <p>Connecting qualitative research, user needs, and quantitative evidence.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="intro-stats" aria-label="Portfolio highlights">
+        <div class="stat">
+          <strong data-count="130">130+</strong>
+          <span>Research + Users narratives coded</span>
+        </div>
+        <div class="stat">
+          <strong data-count="50">50+</strong>
+          <span>Students supported weekly</span>
+        </div>
+        <div class="stat">
+          <strong data-count="4">4+</strong>
+          <span>Years leadership experience</span>
+        </div>
+        <div class="stat">
+          <strong data-count="15">15+</strong>
+          <span>Tools, languages, and technologies</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section site-shell reveal" id="about">
+      <div class="section-heading">
+        <span class="eyebrow">About</span>
+        <h2>My work sits between people, data, and decisions.</h2>
+        <p class="lede">
+          My experience spans research labs, teaching, technical projects, marketing support, and people-facing roles. That mix is why I’m drawn to analytics and product work: I care about the numbers, but I also care about the people behind them.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="glass-card about-copy">
+          <p>
+            Hi, I’m Stina. I recently graduated from the University of Maryland with a B.S. in Information Science and a minor in Astronomy. I’m focused on market analytics, product analytics, and data-driven strategy, especially work that starts with a messy question and turns into a clear recommendation.
+          </p>
+          <p>
+            In research, I’ve worked with qualitative coding, inter-rater reliability, research documentation, and data quality checks. In teaching, I’ve supported students through Python, analytics, debugging, and technical problem-solving. Both experiences taught me how to explain complex information clearly.
+          </p>
+          <p>
+            I also build data and web projects that combine public datasets, APIs, visualization, and user-centered design. I’m most interested in work that helps teams understand behavior, spot patterns, and make better product or business decisions.
+          </p>
+        </div>
+
+        <aside class="glass-card about-side" aria-label="Focus areas">
+          <div class="about-tile">
+            <h3>Analytics</h3>
+            <p>Finding patterns in data and turning them into clear takeaways.</p>
+          </div>
+          <div class="about-tile">
+            <h3>Research + Users</h3>
+            <p>Understanding people through qualitative coding, documentation, and careful analysis.</p>
+          </div>
+          <div class="about-tile">
+            <h3>Product Thinking</h3>
+            <p>Product Thinking projects with HTML, CSS, JavaScript, Python, APIs, and databases.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section site-shell reveal" id="featured">
+      <div class="section-heading">
+        <span class="eyebrow">Featured Project</span>
+        <h2>A human-centered app that connects mood, interaction, and data.</h2>
+      </div>
+
+      <article class="glass-card featured">
+        <div class="featured-visual" aria-hidden="true">
+          <div class="dashboard-frame">
+            <div class="dash-top">
+              <div class="dash-dots"><span></span><span></span><span></span></div>
+              <span class="dash-title">Cheer Me Up</span>
+            </div>
+            <div class="dash-map mood-visual"></div>
+            <div class="dash-bottom">
+              <span class="dash-chip">Mood</span>
+              <span class="dash-chip">Favorites</span>
+              <span class="dash-chip">Trends</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="featured-copy">
+          <span class="eyebrow">Product + Data</span>
+          <h3>Cheer Me Up</h3>
+          <p>
+            Cheer Me Up is the project that best represents the kind of work I want to do next. It combines product thinking, user experience, APIs, and data visualization into a small wellness app that helps people track their mood and interact with mood-boosting content.
+          </p>
+
+          <div class="tag-row">
+            <span class="tag">Product Thinking</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">APIs</span>
+            <span class="tag">Mood Data</span>
+            <span class="tag">Visualization</span>
+          </div>
+
+          <ul class="feature-list">
+            <li>Built around a clear user need: making a bad day feel more manageable</li>
+            <li>Integrated quote, advice, cat fact, and dog image APIs</li>
+            <li>Added saved favorites so users can return to content that helped them</li>
+            <li>Used mood visualization to connect user inputs with simple trends</li>
+          </ul>
+
+          <div class="project-links">
+            <a class="small-link" href="PASTE_CHEER_LIVE_LINK_HERE" target="_blank" rel="noopener">Live Link</a>
+            <a class="small-link" href="PASTE_CHEER_GITHUB_LINK_HERE" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section site-shell reveal" id="experience">
+      <div class="section-heading">
+        <span class="eyebrow">Experience</span>
+        <h2>Experience that combines analysis, communication, and people skills.</h2>
+        <p class="lede">
+          I have worked in research labs, classrooms, customer-facing roles, marketing support, and leadership positions. Each role strengthened how I analyze information, communicate with different audiences, and stay organized under pressure.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-card">
+            <div class="timeline-head">
+              <div>
+                <h3>Undergraduate Research + Users Assistant</h3>
+                <div class="timeline-place">Human-AI Systems Integration &amp; Analysis Laboratory, UMD</div>
+              </div>
+              <span class="timeline-date">Jan 2026 — Present</span>
+            </div>
+            <p>
+              I support research on human-AI collaboration and team cognition by turning participant narratives into organized, research-ready data.
+            </p>
+            <ul class="clean-list">
+              <li>Coded and reviewed 130+ qualitative participant narratives using a structured codebook.</li>
+              <li>Supported inter-rater reliability checks using Cohen’s Kappa to measure consistency.</li>
+              <li>Helped improve data quality so findings could be trusted and analyzed clearly.</li>
+              <li>Prepared coded data for later statistical analysis and interpretation.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-card">
+            <div class="timeline-head">
+              <div>
+                <h3>Undergraduate Research + Users Assistant</h3>
+                <div class="timeline-place">Team Optimization &amp; Research + Users Laboratory, UMD</div>
+              </div>
+              <span class="timeline-date">May 2025 — May 2026</span>
+            </div>
+            <p>
+              I supported human-subject research sessions by setting up technology, monitoring sessions, and helping maintain clean data collection.
+            </p>
+            <ul class="clean-list">
+              <li>Set up video, audio, and Zoom systems for research sessions.</li>
+              <li>Troubleshot hardware and software issues during live sessions.</li>
+              <li>Kept sessions organized and helped protect data quality.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-card">
+            <div class="timeline-head">
+              <div>
+                <h3>Undergraduate Teaching Assistant</h3>
+                <div class="timeline-place">Information Science, University of Maryland</div>
+              </div>
+              <span class="timeline-date">Aug 2024 — May 2026</span>
+            </div>
+            <p>
+              I supported undergraduate students in programming, data analytics, debugging, and problem-solving, often translating technical concepts into language that made sense to beginners.
+            </p>
+            <ul class="clean-list">
+              <li>Supported 50+ students each week with Python programming and data analytics.</li>
+              <li>Led office hours where students could get help with debugging and assignments.</li>
+              <li>Worked with faculty on course materials, grading support, and student questions.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-card">
+            <div class="timeline-head">
+              <div>
+                <h3>Bartender &amp; Marketing Assistant</h3>
+                <div class="timeline-place">Cornerstone Bar &amp; Grill</div>
+              </div>
+              <span class="timeline-date">May 2024 — May 2026</span>
+            </div>
+            <p>
+              I balanced customer service, social media content, and staff training in a fast-paced environment, which strengthened my communication, audience awareness, and operations skills.
+            </p>
+            <ul class="clean-list">
+              <li>Handled high-volume customer interactions while staying organized and professional.</li>
+              <li>Created TikTok content to support the bar’s online visibility and brand presence.</li>
+              <li>Trained new staff on procedures, communication, and daily workflow.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-card">
+            <div class="timeline-head">
+              <div>
+                <h3>Pool Manager, Lifeguard &amp; Swim Coach</h3>
+                <div class="timeline-place">Aquatics Leadership</div>
+              </div>
+              <span class="timeline-date">2019 — 2024</span>
+            </div>
+            <p>
+              These roles strengthened my leadership, communication, and decision-making skills in safety-focused, people-centered environments.
+            </p>
+            <ul class="clean-list">
+              <li>Helped manage daily pool operations and lifeguard teams.</li>
+              <li>Coached 100+ swimmers and helped create engaging practices.</li>
+              <li>Worked with children of different ages and skill levels, including swimmers with special needs.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section site-shell reveal" id="research">
+      <div class="section-heading">
+        <span class="eyebrow">Research + Users</span>
+        <h2>Research + Users taught me how much clean, careful data matters.</h2>
+      </div>
+
+      <div class="research-grid">
+        <article class="glass-card research-card">
+          <h3>Human-AI Collaboration</h3>
+          <p>
+            My research experience focuses on human-AI collaboration, team cognition, and the process of turning participant narratives into structured data that can be analyzed and used to understand behavior.
+          </p>
+          <p>
+            This work made me more detail-oriented and helped me understand how much data quality, coding consistency, and context affect the final insight.
+          </p>
+        </article>
+
+        <article class="glass-card research-card">
+          <h3>Research + Users Methods &amp; Interests</h3>
+          <ul class="clean-list">
+            <li>Qualitative coding and structured codebooks</li>
+            <li>Inter-rater reliability and Cohen’s Kappa</li>
+            <li>Human-subject research data collection</li>
+            <li>Human-computer interaction and behavioral analytics</li>
+            <li>Artificial intelligence and team cognition</li>
+          </ul>
+
+          <div class="interest-cloud">
+            <span>Human-AI Teams</span>
+            <span>Behavioral Data</span>
+            <span>Data Visualization</span>
+            <span>Research + Users Design</span>
+            <span>Machine Learning</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section site-shell reveal" id="projects">
+      <div class="section-heading">
+        <span class="eyebrow">Projects</span>
+        <h2>Projects framed around product thinking, analytics, users, and decision-making.</h2>
+        <p class="lede">
+          These projects come from coursework and independent portfolio work. I’m framing them around the skills I want to use professionally: analytics, user-focused thinking, data storytelling, and clear communication.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+
+        <article class="project-card">
+          <div class="project-thumb"><span class="project-icon">CM</span></div>
+          <h3>Cheer Me Up</h3>
+          <p>
+            A user-focused wellness app that combines mood tracking, saved favorites, API content, and chart-based visualization.
+          </p>
+          <div class="tag-row">
+            <span class="tag">JavaScript</span>
+            <span class="tag">User Data</span>
+            <span class="tag">APIs</span>
+          </div>
+          <div class="project-links">
+            <a class="small-link" href="PASTE_CHEER_LIVE_LINK_HERE" target="_blank" rel="noopener">Live Link</a>
+            <a class="small-link" href="PASTE_CHEER_GITHUB_LINK_HERE" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb"><span class="project-icon">OI</span></div>
+          <h3>Ocean Intelligence Dashboard</h3>
+          <p>
+            An interactive analytics project that helps users explore patterns in shark attack data by species, country, year, and activity.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">APIs</span>
+            <span class="tag">Plotly</span>
+          </div>
+          <div class="project-links">
+            <a class="small-link" href="PASTE_OCEAN_LIVE_LINK_HERE" target="_blank" rel="noopener">Live Link</a>
+            <a class="small-link" href="PASTE_OCEAN_GITHUB_LINK_HERE" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+
+
+        <article class="project-card">
+          <div class="project-thumb"><span class="project-icon">SA</span></div>
+          <h3>Shark Attack Data Explorer</h3>
+          <p>
+            A Python analytics project where I cleaned a global shark attack dataset and turned it into clearer trends by location, species, and activity.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Pandas</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Data Cleaning</span>
+          </div>
+          <div class="project-links">
+            <a class="small-link" href="PASTE_SHARK_LIVE_LINK_HERE" target="_blank" rel="noopener">Live Link</a>
+            <a class="small-link" href="PASTE_SHARK_GITHUB_LINK_HERE" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+
+
+        <article class="project-card">
+          <div class="project-thumb"><span class="project-icon">DL</span></div>
+          <h3>Dream Logger</h3>
+          <p>
+            A personal analytics app that turns journal entries into structured data and looks for recurring themes through keyword overlap and visualization.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">JSON</span>
+            <span class="tag">Viz</span>
+          </div>
+          <div class="project-links">
+            <a class="small-link" href="PASTE_DREAM_LIVE_LINK_HERE" target="_blank" rel="noopener">Live Link</a>
+            <a class="small-link" href="PASTE_DREAM_GITHUB_LINK_HERE" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+
+
+        <article class="project-card">
+          <div class="project-thumb"><span class="project-icon">AD</span></div>
+          <h3>Astronomy Data Analysis</h3>
+          <p>
+            A Python-based analysis project using observational astronomy data to practice scientific computing, visualization, and interpretation.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Science</span>
+          </div>
+          <div class="project-links">
+            <a class="small-link" href="PASTE_ASTRONOMY_LIVE_LINK_HERE" target="_blank" rel="noopener">Live Link</a>
+            <a class="small-link" href="PASTE_ASTRONOMY_GITHUB_LINK_HERE" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+
+
+        <article class="project-card">
+          <div class="project-thumb"><span class="project-icon">PF</span></div>
+          <h3>Personal Portfolio</h3>
+          <p>
+            The website you are reading now, designed and built to present my work clearly for analytics, product, research, and data-focused roles.
+          </p>
+          <div class="tag-row">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a class="small-link" href="PASTE_PORTFOLIO_LIVE_LINK_HERE" target="_blank" rel="noopener">Live Link</a>
+            <a class="small-link" href="PASTE_PORTFOLIO_GITHUB_LINK_HERE" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section site-shell reveal" id="skills">
+      <div class="section-heading">
+        <span class="eyebrow">Skills</span>
+        <h2>Skills I use to connect analysis, communication, and strategy.</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Data Tools</h3>
+          <ul>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>R</li>
+            <li>Excel</li>
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>GitHub</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Analytics</h3>
+          <ul>
+            <li>Market Analysis</li>
+            <li>Data Cleaning</li>
+            <li>Data Visualization</li>
+            <li>Statistical Analysis</li>
+            <li>Dashboard Thinking</li>
+            <li>Trend Analysis</li>
+            <li>Insight Communication</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Research + Users</h3>
+          <ul>
+            <li>Qualitative Coding</li>
+            <li>User-Centered Thinking</li>
+            <li>Research Methods</li>
+            <li>Cohen’s Kappa</li>
+            <li>Human Subjects Research</li>
+            <li>Documentation</li>
+            <li>Audience Awareness</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Product + Technical</h3>
+          <ul>
+            <li>Product Thinking</li>
+            <li>Problem Framing</li>
+            <li>REST APIs</li>
+            <li>JSON</li>
+            <li>Supabase</li>
+            <li>HTML/CSS/JavaScript</li>
+            <li>Responsive Design</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section site-shell reveal" id="education">
+      <div class="section-heading">
+        <span class="eyebrow">Education</span>
+        <h2>My academic background connects information, people, and data.</h2>
+      </div>
+
+      <div class="education-wrap">
+        <article class="glass-card edu-card">
+          <h3>University of Maryland</h3>
+          <p>
+            Bachelor of Science in Information Science with a minor in Astronomy. Recently graduated.
+          </p>
+          <p>
+            My coursework supports my interests in analytics, product thinking, databases, information organization, and human-centered technology.
+          </p>
+          <div class="course-grid">
+            <span>Object-Oriented Data Tools</span>
+            <span>Data Science</span>
+            <span>Database Design</span>
+            <span>Data Visualization</span>
+            <span>Statistics</span>
+            <span>Information Organization</span>
+            <span>Human-Computer Interaction</span>
+            <span>Market &amp; Product Analytics</span>
+          </div>
+        </article>
+
+        <article class="glass-card looking-card">
+          <h3>Roles I’m targeting</h3>
+          <p>
+            I’m seeking entry-level roles where I can use analytics, research, and communication to help teams understand people, products, markets, and decisions.
+          </p>
+          <ul class="clean-list">
+            <li>Market Analyst, Data Analyst, or Business Analyst roles</li>
+            <li>Research + Users Assistant or Research + Users Analyst roles</li>
+            <li>Research Analyst or User Insights roles</li>
+            <li>Teams working on consumer insights, product strategy, marketing analytics, AI, or decision science</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-tight site-shell reveal" id="contact">
+      <div class="contact-panel">
+        <span class="eyebrow">Contact</span>
+        <h2>Let’s connect.</h2>
+        <p>
+          Whether you’re hiring for market analytics, product, data, research, or strategy-focused roles, I’d love to connect.
+        </p>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:drillstina@gmail.com">
+            <span>Email</span>
+            <strong>drillstina@gmail.com</strong>
+          </a>
+
+          <a class="contact-card" href="PASTE_LINKEDIN_URL_HERE" target="_blank" rel="noopener">
+            <span>LinkedIn</span>
+            <strong>Add your LinkedIn URL</strong>
+          </a>
+
+          <a class="contact-card" href="PASTE_GITHUB_URL_HERE" target="_blank" rel="noopener">
+            <span>GitHub</span>
+            <strong>Add your GitHub URL</strong>
+          </a>
+
+          <a class="contact-card" href="assets/Stina_Drill_Resume.pdf" target="_blank" rel="noopener">
+            <span>Resume</span>
+            <strong>Open PDF</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-shell">
+    <div>
+      Designed &amp; developed by <strong>Stina Drill</strong>.
+    </div>
+    <div class="built-with" aria-label="Built with">
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>JavaScript</span>
+      <span>GitHub Pages</span>
+      <span>Google Fonts</span>
+      <span>Responsive Design</span>
+    </div>
+  </footer>
+
+  <script>
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener("click", () => {
+    const open = mobileMenu.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(open));
+  });
+
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+const navLinks = document.querySelectorAll("[data-nav]");
+const observedSections = [...navLinks]
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
+
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+
+    const id = `#${entry.target.id}`;
+    navLinks.forEach((link) => {
+      link.toggleAttribute("aria-current", link.getAttribute("href") === id);
+    });
+  });
+}, { rootMargin: "-42% 0px -52% 0px" });
+
+observedSections.forEach((section) => navObserver.observe(section));
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+
+    entry.target.classList.add("visible");
+    revealObserver.unobserve(entry.target);
+  });
+}, { threshold: 0.12 });
+
+revealElements.forEach((element) => revealObserver.observe(element));
+
+const counters = document.querySelectorAll("[data-count]");
+
+const animateCounter = (counter) => {
+  const target = Number(counter.dataset.count);
+  const suffix = counter.textContent.includes("+") ? "+" : "";
+  let start = 0;
+  const duration = 1200;
+  const startTime = performance.now();
+
+  const update = (currentTime) => {
+    const progress = Math.min((currentTime - startTime) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = Math.floor(start + (target - start) * eased);
+    counter.textContent = `${value}${suffix}`;
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      counter.textContent = `${target}${suffix}`;
+    }
+  };
+
+  requestAnimationFrame(update);
+};
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+
+    animateCounter(entry.target);
+    counterObserver.unobserve(entry.target);
+  });
+}, { threshold: 0.5 });
+
+counters.forEach((counter) => counterObserver.observe(counter));
+
+</script>
+</body>
+</html>
